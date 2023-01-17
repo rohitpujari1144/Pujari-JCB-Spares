@@ -49,6 +49,7 @@ function logInValidateInfo(){
             logInPasswordInput.value=""
             document.getElementById('loginFormContainer').style='display:none'
             document.getElementById('mainDiv').classList.remove('blurDiv')
+            window.open('./user_profile_index.html')
         }
     }
 }
