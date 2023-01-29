@@ -59,7 +59,7 @@ function logInInfoValidate(){
                         document.getElementById('loginFormContainer').style='display:none'
                         alert('Login successful')
                         document.getElementById('loginFormContainer').style='display: block; left:50%; top:50%; transform: translate(-50%, -50%);'
-                        window.open('./new.html')
+                        window.open('./company_home_page_index.html')
                         logInUsernameInput.value=''
                         logInPasswordInput.value=''
                     }
