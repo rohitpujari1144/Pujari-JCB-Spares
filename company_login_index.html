@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./company_login_style.css">
+    <title>PUJARI JCB SPARES - ACCOUNT</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand companyHeading">PUJARI JCB SPARES</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" onclick="navBarAddProductButtonClick()">Add Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Log Out</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+    </nav>
+
+    <div class="conatiner-fluid" id="mainDivOne">
+        <!-- new order div start -->
+        <div class="container newOrdersDiv">
+          <h4>New Orders</h4>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Delivery Address</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Payment Mode</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Joy</td>
+                <td>Hydraulic Cylinder Seal Kit</td>
+                <td>Bandra (W), Mumbai</td>
+                <td>2</td>
+                <td>Cash on Delivery</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Nimish Roy</td>
+                <td>JCB Transmission Oil Plus</td>
+                <td>Kalyani Nagar, Pune</td>
+                <td>1</td>
+                <td>Credit Card</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Sumit S</td>
+                <td>JCB Bucket Sidecutter Teeth</td>
+                <td>K. K. Nagar West, Pune</td>
+                <td>2</td>
+                <td>UPI</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- new order div end -->
+
+        <!-- delivered order div start -->
+        <div class="container deliveredOrdersDiv">
+          <h4>Delivered Orders</h4>
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Sr. No.</th>
+                <th scope="col">Customer Name</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Delivery Address</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Payment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Manas V</td>
+                <td>Bucket Ram Hose</td>
+                <td>S. K. Heights, Kalyani Nagar, Pune</td>
+                <td>2</td>
+                <td>Cash on Delivery</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Ramrao K</td>
+                <td>JCB Air Filters</td>
+                <td>Worli, Mumbai</td>
+                <td>1</td>
+                <td>UPI</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Ranveer N</td>
+                <td>JCB Dipper Bush</td>
+                <td>Bandra (W), Mumbai</td>
+                <td>3</td>
+                <td>UPI</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- delivered order div end -->
+    </div>
+
+    <!-- add new product div start -->
+    <div class="container addProductDiv" id="addProductDiv" style="display: none;">
+      <i class="fa-regular fa-circle-xmark addProductPageCrossMark" onclick="addProductPageCrossMarkClick()"></i>
+      <div style="display: flex;">
+          <div class="m-2">
+              <label for="productNameInput" class="form-label">Product Name</label>
+              <input type="text" class="form-control" id="productNameInput" aria-describedby="emailHelp" onkeyup="productNameValidate()">
+              <span id="productNameError" style="color: red;"></span>
+          </div>
+          <div class="m-2">
+              <label for="manufacturerInput" class="form-label">Manufacturer</label>
+              <input type="text" class="form-control" id="manufacturerInput" aria-describedby="emailHelp" onkeyup="manufacturerValidate()">
+              <span id="manufacturerError" style="color: red;"></span>
+          </div>
+      </div>
+      
+      <div style="display: flex;">
+          <div class="m-2">
+              <label for="quantityInput" class="form-label">Quantity</label>
+              <input type="text" class="form-control" id="quantityInput" aria-describedby="emailHelp">
+          </div>
+          <div class="m-2">
+              <label for="materialInput" class="form-label">Material</label>
+              <input type="text" class="form-control" id="materialInput" aria-describedby="emailHelp">
+          </div>
+      </div>
+      
+      <div style="display: flex;">
+          <div class="m-2">
+              <label for="lengthInput" class="form-label">Length</label>
+              <input type="text" class="form-control" id="lengthInput" aria-describedby="emailHelp">
+          </div>
+          <div class="m-2">
+              <label for="modelInput" class="form-label">Model</label>
+              <input type="text" class="form-control" id="modelInput" aria-describedby="emailHelp" onkeyup="modelValidate()">
+              <span id="modelError" style="color: red;"></span>
+          </div>
+      </div>
+      
+      <div style="display: flex;">
+          <div class="m-2">
+              <label for="priceInput" class="form-label">Price</label>
+              <input type="text" class="form-control" id="priceInput" aria-describedby="emailHelp" onkeyup="priceValidate()">
+              <span id="priceError" style="color: red;"></span>
+          </div>
+          <div class="m-2">
+              <label for="deliveryChargesInput" class="form-label">Delivery Charges</label>
+              <input type="text" class="form-control" id="deliveryChargesInput" aria-describedby="emailHelp" onkeyup="deliveryChargesValidate()">
+              <span id="deliveryChargesError" style="color: red;"></span>
+          </div>
+      </div>
+      
+      <div class="input-group photoUploadDiv">
+          <input type="file" class="form-control" id="productPhoto" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+          <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04" onclick="productPhotoUploadButtonClick()">Upload</button>
+      </div>
+      <span class="m-2" id="productPhotoError" style="color: red;"></span>
+      <div class="m-3" style="text-align: center;">
+          <button class="btn btn-primary" onclick="addProductButtonClick()">Add Product</button>
+      </div>
+    </div>
+    <!-- add new product div end -->
+
+    <script src="./company_login_script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
