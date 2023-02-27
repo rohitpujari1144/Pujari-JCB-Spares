@@ -59,9 +59,9 @@ function logInInfoValidate() {
                         sessionStorage.setItem('userLoginInfo', JSON.stringify(LoginInfo))
                         console.log(JSON.parse(sessionStorage.getItem('userLoginInfo')));
                         alert('Login successful')
-                        document.getElementById('loginFormContainer').style = 'display: block; left:50%; top:50%; transform: translate(-50%, -50%);'
+                        // document.getElementById('loginFormContainer').style = 'display: block; left:50%; top:50%; transform: translate(-50%, -50%);'
                         window.open('/company_home_page_index.html', '_self')
-                        window.close('/index.html')
+                        // window.close('/index.html')
                         logInUsernameInput.value = ''
                         logInPasswordInput.value = ''
                     }
