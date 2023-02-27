@@ -1,0 +1,40 @@
+body{
+    background: linear-gradient(#7F7FD5 , #91EAE4);
+    /* background-color: #75848c; */
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: grey;
+}
+
+.loginFormContainer{
+    max-width: 450px;
+    border-radius: 10px;
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%);
+    background-color: white;
+}
+
+.logInCrossMark{
+    font-size: x-large;
+    position: relative;
+    left: 97.7%;
+}
+
+.logInCrossMark:hover{
+    color: red;
+    cursor: pointer;
+}
+
+.LogIn{
+    text-align: center;
+}
+
+.LoginButtonDiv{
+    text-align: center;
+}

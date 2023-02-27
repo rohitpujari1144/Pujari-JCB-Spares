@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Log In</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark" id="navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand companyHeading" style="letter-spacing: 4px; font-family:Trebuchet MS;">PUJARI JCB SPARES</a>
+        </div>
+    </nav>
+
+    <!-- login div start -->
+    <div class="container loginFormContainer" id="loginFormContainer">
+        <div class="mt-3 LogIn">
+            <h4 style="text-align: center;">Log In</h4>
+        </div>
+
+        <div class="m-2">
+            <label for="logInUsernameInput" class="form-label">Username</label>
+            <input type="text" class="form-control" id="logInUsernameInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="loginUsernameValidate()">
+            <span id="logInUsernameError" style="color: red;"></span>
+        </div>
+
+        <div class="m-2">
+            <label for="logInPasswordInput" class="form-label">Password</label>
+            <input type="password" class="form-control" id="logInPasswordInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="loginPasswordValidate()">
+            <span id="logInPasswordError" style="color: red;"></span>
+        </div>
+
+        <div class="m-4 LoginButtonDiv" style="text-align: center;">
+            <button type="button" class="btn btn-outline-success" onclick="logInInfoValidate()">Log In</button>
+        </div>
+
+        <h6 style="text-align:center">forget password ? <a class="forgetPassword" onclick="forgerPasswordClick()">click here</a></h6>
+
+        <div class="mb-4" style="text-align: center;">
+            <h6>new user ? <a class="createAccount" href="#signUpDiv" onclick="createAccountClick()">create an account</a></h6>
+        </div>
+    </div>
+    <!-- login div end -->
+ 
+    <!-- sign up div start -->
+    <div class="container signUpDiv" id="signUpDiv" style="display: none;">
+        <h4 class="mt-3 signUp">Sign Up</h4>
+
+        <div class="m-2">
+            <label for="signUpNameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="signUpNameInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="signUpNameValidate()">
+            <span id="signUpNameError" style="color: red;"></span>
+        </div>
+
+        <div class="m-2">
+            <label for="signUpEmailIdInput" class="form-label">Email Id</label>
+            <input type="text" class="form-control" id="signUpEmailIdInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="signUpEmailIdValidate()">
+            <span id="signUpEmailIdError" style="color: red;"></span>
+        </div>
+
+        <div class="m-2">
+            <label for="signUpUsernameInput" class="form-label">Username</label>
+            <input type="text" class="form-control" id="signUpUsernameInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="signUpUsernameValidate()">
+            <span id="signUpUsernameError" style="color: red;"></span>
+        </div>
+
+        <div class="m-2">
+            <label for="signUpPasswordInput" class="form-label">Password</label>
+            <input type="text" class="form-control" id="signUpPasswordInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="signUpPasswordValidate()">
+            <span id="signUpPasswordError" style="color: red;"></span>
+        </div>
+
+        <div class="m-2">
+            <label for="signUpCPasswordInput" class="form-label">Confirm Password</label>
+            <input type="text" class="form-control" id="signUpCPasswordInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="signUpCPasswordValidate()">
+            <span id="signUpCPasswordError" style="color: red;"></span>
+        </div>
+
+        <div class="m-4 LoginButtonDiv" style="text-align: center;">
+            <button type="button" class="btn btn-outline-success" onclick="signUpInfoValidate()">Register</button>
+        </div>
+
+        <div class="mb-4" style="text-align: center;">
+            <h6>already have an account ? <a class="createAccount" href="#loginFormContainer" onclick="loginHereClick()">login here</a></h6>
+        </div>
+    </div>
+    <!-- sign up div end -->
+
+    <!-- change password div start -->
+    <div class="container changePasswordDiv" id="changePasswordDiv" style="display: none;">
+        <div class="m-3">
+            <label for="changePasswordEmailInput" class="form-label">Email Id</label>
+            <input type="text" class="form-control" id="changePasswordEmailInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="changePasswordEmailValidate()">
+            <span id="changePasswordEmailError" style="color: red;"></span>
+        </div>
+        <div class="m-3">
+            <label for="changePasswordOtpInput" class="form-label">Enter OTP</label>
+            <input type="text" class="form-control" id="changePasswordOtpInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="changePasswordOtpValidate()">
+            <span id="changePasswordOtpError" style="color: red;"></span>
+        </div>
+        <div class="m-3">
+            <label for="newPasswordInput" class="form-label">New Password</label>
+            <input type="text" class="form-control" id="newPasswordInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="changePasswordInputValidate()">
+            <span id="newPasswordError" style="color: red;"></span>
+        </div>
+        <div class="m-3">
+            <label for="newConfirmPasswordInput" class="form-label">Confirm Password</label>
+            <input type="text" class="form-control" id="newConfirmPasswordInput" aria-describedby="emailHelp" autocomplete="off" onkeyup="changeConfirmPasswordInputValidate()">
+            <span id="newConfirmPasswordError" style="color: red;"></span>
+        </div>
+        <div class="m-4" style="text-align: center;">
+            <button type="button" class="btn btn-outline-primary" onclick="changePasswordClick()">Change Password</button>
+        </div>
+        <div class="mb-4" style="text-align: center;">
+            <h6><a class="createAccount" href="#loginFormContainer" onclick="backToLoginClick()">back to login</a></h6>
+        </div>
+    </div>
+    <!-- change password div start -->
+
+    <script src="./script.js"></script>
+</html>

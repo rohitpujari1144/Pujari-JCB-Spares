@@ -1,0 +1,42 @@
+.userProfileDiv{
+    max-width:600px; 
+    border: 1px solid black; 
+    border-radius:10px;
+}
+
+.heading{
+    font-family: Trebuchet MS; 
+    font-weight:bold
+}
+
+.orderTableDiv{
+    border: 1px solid black; 
+    border-radius:10px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: scroll;
+}
+
+.orderTableDiv::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.orderTableDiv::-webkit-scrollbar-thumb{
+    width: 10px;
+    color: grey;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    width: 10px;
+    background-color: grey;
+    border-radius: 10px;
+}
