@@ -1,0 +1,287 @@
+body{
+    background: linear-gradient(#7F7FD5 , #91EAE4);
+    background-attachment: fixed;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+    background: linear-gradient(#7F7FD5 , #91EAE4);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: rgb(94, 55, 225);
+}
+
+body::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(74, 23, 225);
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: rgb(133, 219, 239);
+}
+
+.companyHeading{
+    letter-spacing: 4px;
+    font-family:Trebuchet MS;
+}
+
+.myProfileButton:hover{
+    cursor: pointer;
+}
+
+.logOutButton{
+    cursor: pointer;
+}
+/* navbar end */
+
+
+/* login div start */
+.loginFormContainer{
+    max-width: 450px;
+    border-radius: 8px;
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%, -50%);
+    background-color: white;
+}
+
+.LogIn{
+    text-align: center;
+}
+
+.LoginButtonDiv{
+    text-align: center;
+}
+
+.forgetPassword{
+    text-decoration: none;
+}
+
+.forgetPassword:hover{
+    text-decoration: underline;
+    text-decoration-color: blue;
+    cursor: pointer;
+}
+
+.createAccount{
+    text-decoration: none;
+}
+
+.createAccount:hover{
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+/* login div end */
+
+
+/* change password div start */
+.changePasswordDiv{
+    border-radius: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: white;
+}
+/* change password div end */
+
+
+/* signup div start */
+.signUpDiv{
+    border-radius: 8px;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-46%, -50%);
+    background-color: white;
+    max-width: 450px;
+}
+
+.signUp{
+    text-align: center;
+}
+/* signup div end */
+
+
+/* our services style start */
+.ourServicesDiv {
+    width: 800px;
+    border: 1px solid black;
+    height: 550px;
+    border-radius: 7px;
+    overflow: auto;
+    background-color:rgb(255, 255, 255);
+}
+
+.serviceTitle {
+    font-size: large;
+    font-family: Trebuchet MS;
+    font-weight: bold
+}
+
+.serviceParts {
+    font-family: Trebuchet MS;
+    font-weight: bold
+}
+
+.serviceParts:hover {
+    color: blue;
+}
+
+.hoverClass:hover {
+    text-decoration: underline;
+    text-decoration-color: blue;
+}
+
+.ourServicesDiv::-webkit-scrollbar {
+    width: 8px;
+    background: white;
+    border-radius: 7px;
+}
+
+.ourServicesDiv::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(187, 183, 183);
+}
+
+.ourServicesDiv::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(153, 149, 149);
+}
+
+.ourServicesDiv::-webkit-scrollbar-corner {
+    border-radius: 8px;
+    background-color: #e3e3e3;
+}
+/* our services style end */
+
+
+/* homepage show style start */
+.slidingImagesDiv {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 550px;
+    width: 2000px
+}
+
+.slidingImage {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%
+}
+/* homepage show style end */
+
+
+/* product show style start */
+#demoDivOne {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-evenly;
+}
+
+.productDiv {
+    width: 16rem;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.productOrderDiv{
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    transform: translate(-47%, -50%);
+    border-radius: 6px;
+    background-color: grey;
+    max-width: 900px;
+    height: 600px;
+    overflow-y: auto;
+}
+
+.productPhotoDiv {
+    border-radius: 6px;
+    width: 350px;
+    height: 400px;
+}
+
+.productInfoDiv {
+    border-radius: 6px;
+    width: 350px;
+}
+
+.placeOrderButton{
+    position: relative; 
+    left:50%; 
+    transform:translate(-50%)
+}
+
+.paymentDiv {
+    border-radius: 6px;
+    max-width: 600px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.fa-circle-xmark {
+    font-size: 190%;
+    position: absolute;
+    left: 96%;
+    transform: translate(-4%);
+    margin-top: 5px
+}
+
+.fa-circle-xmark:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.productOrderDiv::-webkit-scrollbar {
+    width: 10px;
+    background-color: grey;
+    border-radius: 8px;
+}
+
+.productOrderDiv::-webkit-scrollbar-thumb {
+    background-color: rgb(152, 152, 152);
+    border-radius: 8px;
+}
+
+.productOrderDiv::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(109, 109, 109);
+}
+/* product show style end */
+
+
+/* contact style start */
+.contactDiv {
+    border: 1px solid black;
+    border-radius: 7px;
+    width: fit-content;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    margin-bottom: 20px;
+}
+
+.contacts {
+    font-family: Trebuchet MS;
+    font-size: large
+}
+
+.fa-location-dot:hover {
+    color: blue;
+}
+
+.fa-envelope:hover {
+    color: brown;
+}
+
+.fa-phone:hover {
+    color: green;
+}
+/* contact style end */
