@@ -1,0 +1,91 @@
+body {
+    background: linear-gradient(#7F7FD5, #91EAE4);
+    background-attachment: fixed;
+}
+
+.nav-link:hover{
+    cursor: pointer;
+}
+
+.logoutButton:hover {
+    cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.userProfileDiv {
+    background-color: white;
+    max-width: 600px;
+    border-radius: 6px;
+    margin-left: 25px;
+    margin-top: 70px;
+}
+
+#userProfile {
+    margin-top: 70px;
+}
+
+.tableContainer {
+    background-color: white;
+    width: fit-content;
+    margin-left: 25px;
+    margin-top: 20px;
+    border-radius: 6px;
+    margin-bottom: 15px
+}
+
+.yourOrders {
+    margin-top: 15px;
+    padding-left: 10px;
+}
+
+.orderTableDiv {
+    overflow-y: auto;
+    height: 260px;
+    width: 100%;
+}
+
+.orderTableDiv {
+    position: sticky;
+    top: 0px;
+}
+
+thead {
+    position: sticky;
+    top: 0px;
+    background: #eee;
+
+}
+
+th {
+    position: sticky;
+    top: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tbody {
+    background: white;
+}
+
+.textAlign {
+    text-align: center;
+}
+
+.orderTableDiv::-webkit-scrollbar {
+    width: 10px;
+    background: #91a6ea;
+}
+
+.orderTableDiv::-webkit-scrollbar-thumb {
+    background-color: rgb(94, 55, 225);
+}
+
+.orderTableDiv::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(73, 30, 203);
+}
